@@ -32,7 +32,7 @@ function App() {
             <Route path="/money">
               <Money />
             </Route>
-            <Route path="statistics">
+            <Route path="/statistics">
               <Statistics />
             </Route>
             <Redirect exact from="/" to="/money" />
