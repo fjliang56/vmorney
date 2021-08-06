@@ -34,7 +34,8 @@ const NoteSection: React.FC = () => {
               <input type="text" placeholder="在这里添加备注"
                      ref={refInput}
                      defaultValue={note}
-                     onBlur={onBlur}/>
+                     onBlur={onBlur}
+              />
           </label>
       </Wrapper>
   )
