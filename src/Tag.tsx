@@ -26,7 +26,7 @@ const InputWrapper = styled.div`
   margin-top: 8px;
 `;
 
-const Tag: React.FC = (props) => {
+const Tag: React.FC = () => {
     const {findTag} = useTags();
     let {id} = useParams<Params>();
     const tag = findTag(parseInt(id));
@@ -37,7 +37,7 @@ const Tag: React.FC = (props) => {
                 <span>编辑标签</span>
             </Topbar>
             <InputWrapper>
-                <Input label="标签名" type="text" placeholder="标签名"/>
+                <Input label="标签名" type="text" placeholder="标签名" value={tag.name}/>
             </InputWrapper>
             <Center>
                 <Space/>
