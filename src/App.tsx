@@ -21,7 +21,7 @@ function App() {
         <AppWrapper>
             <Router>
                 <Switch>
-                    <Route path="/tag/:tag" exact>
+                    <Route path="/tags/:id" exact>
                         <Tag/>
                     </Route>
                     <Route path="/tags" exact>

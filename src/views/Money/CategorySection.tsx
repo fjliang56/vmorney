@@ -25,10 +25,10 @@ const Wrapper = styled.section`
 
 type Props = {
     value: '-'| '+'
-    onChange: (value: '+' |'-') => void;
+    onChange: (value: '-' |'+') => void;
 }
 const CategorySection: React.FC<Props> = (props) => {
-  const categoryMap = {'-':'支出','+':'收入'};
+  const categoryMap = {'-': '支出','+': '收入'};
   const [categoryList] = useState<('-'|'+')[]>(['-','+'])
   const category = props.value
   return(
@@ -38,7 +38,7 @@ const CategorySection: React.FC<Props> = (props) => {
               <li key={c}
                   className={category===c?'selected':''}
                   onClick={()=>{props.onChange(c);}}
-              >{categoryMap}
+              >{categoryMap[c]}
               </li>
               )}
           </ul>
