@@ -17,13 +17,13 @@ const Wrapper = styled.section`
     > button{
       font-size: 18px;float: left;
       width: 25%;height: 64px;border: none;
-      &.ok{
-        height: 128px;
-        float: right;
-      }
       &.zero{
         width: 50%;
       }
+    &.ok {
+      height: 128px;
+      float: right;
+    }
       &:nth-child(1){
         background: #f2f2f2;
       }
