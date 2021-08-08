@@ -19,11 +19,11 @@ const defaultFormDate = {
     note: '',
     category: '-' as Category,
     amount: 0
-}
+};
 
 function Money() {
-    const [selected, setSelected] = useState(defaultFormDate)
-    const {records,addRecord} = useRecords();
+    const [selected, setSelected] = useState(defaultFormDate);
+    const {records, addRecord} = useRecords();
     const onChange = (obj: Partial<typeof selected>) => {
         setSelected({
             ...selected,
@@ -31,9 +31,11 @@ function Money() {
         });
     };
     const submit = () => {
-        addRecord(selected);
-        alert('保存成功')
-        setSelected(defaultFormDate)
+        if(addRecord(selected)) {
+            addRecord(selected);
+            alert('保存成功');
+            setSelected(defaultFormDate);
+        }
     };
     return (
         <MyLayout>
