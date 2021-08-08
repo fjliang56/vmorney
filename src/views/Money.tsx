@@ -23,16 +23,13 @@ const defaultFormDate = {
 
 function Money() {
     const [selected, setSelected] = useState(defaultFormDate);
-    const {addRecord} = useRecords();
+    const {records,addRecord} = useRecords();
     const onChange = (obj: Partial<typeof selected>) => {
-        setSelected({
-            ...selected,
-            ...obj
+        setSelected({...selected, ...obj
         });
     };
     const submit = () => {
         if(addRecord(selected)) {
-            addRecord(selected);
             alert('保存成功');
             setSelected(defaultFormDate);
         }
