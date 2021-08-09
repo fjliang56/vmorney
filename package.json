@@ -1,6 +1,7 @@
 {
   "name": "vmorney",
   "version": "0.1.0",
+  "homepage": "https://fjliang56.github.io/vmorney-website/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",

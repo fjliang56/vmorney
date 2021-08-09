@@ -10,6 +10,9 @@ const Wrapper = styled.div `
 const Main = styled.div`
   flex-grow: 1;
   overflow: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 `
 type Props = {
     className?: string;
@@ -25,7 +28,7 @@ const Layout: React.FC<Props> = (props) => {
     },[props.scrollTop])
     return (
         <Wrapper>
-            <Main className={props.className}>
+            <Main ref={mainRef} className={props.className} date-x={'frank'}>
                 {props.children}
             </Main>
             <Nav />
