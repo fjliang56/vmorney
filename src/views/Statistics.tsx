@@ -61,9 +61,9 @@ function Statistics() {
                                  onChange={value => setCategory(value)}/>
             </CategoryWrapper>
             {array.map(([date, records]) => <div>
-                <header>
+                <Header>
                     {date}
-                </header>
+                </Header>
                 <div>
                     {records.map(r => {
                         return <Item>
